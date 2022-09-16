@@ -1,13 +1,16 @@
+import 'react-native-gesture-handler';
+
 import React from 'react';
-import Header from './src/components/Header';
-import NoteList from './src/Screens/NoteList';
+import {NavigationContainer} from '@react-navigation/native';
+import {StackNavigator} from './src/Navigator/StackNavigator';
+import {Text} from 'react-native';
+import {tableStyles} from './src/Theme/appTheme';
 
 const App = () => {
   return (
-    <>
-      <Header></Header>
-      <NoteList></NoteList>
-    </>
+    <NavigationContainer style={tableStyles.globalMargin}>
+      <StackNavigator />
+    </NavigationContainer>
   );
 };
 
